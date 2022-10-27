@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades</title>
+    <style>
+        body{
+            background-color: rgb(6, 210, 246);
+        }
+        h1{
+            color: rgb(255, 255, 255);
+            font-style: italic;
+        }
+        input{
+            color: rgb(0, 213, 255);
+        }
+        p{
+            color: rgb(255, 255, 255);
+            font: italic 13pt Arial;
+        }
+        div#res{
+            color: aliceblue;
+            font: italic 14pt Arialparaguai;
+        }
+    </style>
+</head>
+<body>
+    <H1>Paises</H1>
+    <p>Nos diga de que pais você é: <input type="text" name="pais" id="pais"> .</p>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar(){
+            var pa = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var p = pais.value
+            res.innerHTML = `O seu pais é : ${p} </br>`
+            if(p == 'Brasil'){
+                res.innerHTML += 'Você é brasileiro'
+            } else{
+                res.innerHTML +=' Você não é brasileiro'
+            }
+        }
+    </script>
+</body>
+</html>
